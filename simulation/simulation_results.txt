@@ -1,1 +1,31 @@
+# Multi-Crop Simulation & Experimental Results
 
+This section documents the simulation, multi-crop threshold testing, and performance validation for the Adaptive Multi-Sensor Predictive Smart Irrigation System.
+
+---
+
+## 1. Crop-Specific Moisture Thresholds & Control Matrix
+
+The system dynamically adapts its decision logic based on crop type, local moisture thresholds, and environmental risk factors (temperature/humidity trends).
+
+| Crop Name | Scientific Name | Moisture Threshold | Key System Behavior & Risk Logic |
+| :--- | :--- | :--- | :--- |
+| **Paddy** | *Oryza sativa* | 45%[cite: 1] | High water demand. Triggers frequent irrigation; stops automatically at 55% to prevent deep percolation[cite: 1]. |
+| **Sugarcane**[cite: 1] | *Saccharum officinarum*[cite: 1] | 40%[cite: 1] | Incorporates Evapotranspiration (ETo) data over a 360-day cycle to prevent crop wilting[cite: 1]. |
+| **Groundnut**[cite: 1] | *Arachis hypogaea*[cite: 1] | 35%[cite: 1] | High humidity sensitivity. System flags pest/fungal risk windows to optimize pesticide spraying[cite: 1]. |
+| **Ragi**[cite: 1] | *Finger Millet*[cite: 1] | 30%[cite: 1] | Drought-resistant. Idle status maintained most of the time to prevent unnecessary water usage[cite: 1]. |
+| **Mango**[cite: 1] | *Mangifera indica*[cite: 1] | Heat Index (>30°C)[cite: 1] | Monitors canopy heat during flowering; triggers micro-irrigation to prevent flower drop[cite: 1]. |
+
+---
+
+## 2. Serial Monitor Verification Logs
+
+### Case A: Dry Soil Condition (Pump Activated)
+When the calculated Dryness Index (DI) exceeds the set threshold (or moisture is low), the pump turns **ON**[cite: 1].
+```text
+--- SENSOR DATA ---[cite: 1]
+Moisture (%): 0.00[cite: 1]
+Temperature (C): 22.31[cite: 1]
+Humidity (%): 73.30[cite: 1]
+Dryness Index: 59.32[cite: 1]
+Pump: ON[cite: 1]
