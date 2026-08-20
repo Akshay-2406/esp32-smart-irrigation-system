@@ -1,1 +1,30 @@
+# Hardware Architecture & System Setup
 
+## Physical System Setup
+Below is the prototype implementation showing the ESP32 microcontroller, integrated sensor suite, power supply, LCD readout, and motor actuator.
+
+![Hardware Setup](../images/hardware_setup.jpg)
+
+---
+
+## Bill of Materials (BOM)
+* **Microcontroller:** ESP32 Development Board
+* **Soil Moisture Sensor:** Resistive/Capacitive Soil Moisture Sensor Module
+* **Temperature Sensor:** DS18B20 Waterproof Stainless Steel Probe
+* **Humidity Sensor:** DHT11 Sensor Module
+* **Display:** 16x2 I2C LCD Display
+* **Actuator:** 5V Single-Channel Relay Module with 3-6V Mini Submersible Water Pump
+* **Power Supply:** 3x 18650 Lithium-ion Battery Holder Pack
+
+---
+
+## Pin Connection Mapping
+
+| Component | Module Pin | ESP32 GPIO Pin | Function |
+| :--- | :--- | :--- | :--- |
+| **Soil Moisture** | AO (Analog Out) | GPIO 34 | Soil moisture level detection (ADC) |
+| **DS18B20 Probe** | Data | GPIO 4 | Soil/Ambient temperature reading (OneWire) |
+| **DHT11 Sensor** | Data | GPIO 5 | Humidity measurement |
+| **Relay Module** | IN (Control) | GPIO 18 | Triggers water pump (HIGH = ON, LOW = OFF) |
+| **I2C LCD Display**| SDA | GPIO 21 | Serial Data Line |
+| **I2C LCD Display**| SCL | GPIO 22 | Serial Clock Line |
