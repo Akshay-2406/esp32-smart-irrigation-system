@@ -29,3 +29,18 @@ Temperature (C): 22.31[cite: 1]
 Humidity (%): 73.30[cite: 1]
 Dryness Index: 59.32[cite: 1]
 Pump: ON[cite: 1]
+
+Case B: Adequate Soil Moisture (Pump Idle)
+
+--- SENSOR DATA ---[cite: 1]
+Moisture (%): 30.00[cite: 1]
+Temperature (C): 27.37[cite: 1]
+Humidity (%): 87.30[cite: 1]
+Dryness Index: 29.91[cite: 1]
+Pump: OFF[cite: 1]
+
+3. Water Efficiency & Savings Analysis
+
+Resource Conservation: Prevents over-watering and deep percolation loss[cite: 1].
+Pest Risk Reduction: Prevents fungal disease outbreaks by tracking RH and temperature thresholds[cite: 1].
+Cloud Visualization: Real-time metrics and event logs are streamed directly to ThingSpeak for remote monitoring[cite: 1].
